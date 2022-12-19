@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #item, #item2 {
+            position: relative;
+            width: 640px;
+            height: auto;
+            padding: 15px 20px;
+            margin: 10px auto;
+            border: 1px solid #464646;
+            float: left;
+        }
+        #item2 {
+            margin-left: 20px;
+        }
+        button {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .over, .over2 {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+        .detail, .detail2 {
+            /* width: 500px; */
+            text-align: justify;
+            line-height: 1.8em;
+            display: none;
+        }
+    </style>
+    <title>상세내용보기</title>
+</head>
+<body>
+    <div id="item">
+        <img src="img/ny-2.JPG" alt="자유의 여신상">
+        <button id="open" class="over" onclick="showDetail();">상세 설명 보기</button>
+        <div id="sangse" class="detail">
+            <h4>The Statue of Liberty</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus athenis effluere postremo omnes putamus incorruptis horum. Hostis nemini tamque addidisti accusator commodi possunt vitam. Prohiberet tincidunt quod maluisset deorsus falli laoreet pervenias massa pervenias honestatis. Falsarum vestra institutionem admodum gravissimis, qui. Aristotelem derigatur nosmet malunt disputando, obcaecati.</p>
+            <button id="close" onclick="hideDetail();">상세 설명 닫기</button>
+        </div>
+    </div>
+    <div id="item2">
+        <img src="img/ny-3.JPG" alt="디즈니랜드">
+        <button id="open2" class="over2" onclick="showDetail2();">상세 설명 보기</button>
+        <div id="sangse2" class="detail2">
+            <h4>Disney Land</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus athenis effluere postremo omnes putamus incorruptis horum. Hostis nemini tamque addidisti accusator commodi possunt vitam. Prohiberet tincidunt quod maluisset deorsus falli laoreet pervenias massa pervenias honestatis. Falsarum vestra institutionem admodum gravissimis, qui. Aristotelem derigatur nosmet malunt disputando, obcaecati.</p>
+            <button id="close2" onclick="hideDetail2();">상세 설명 닫기</button>
+        </div>
+    </div>
+    <!-- 자바스크립트 삽입 -->
+    <script>
+        function showDetail(){
+            document.querySelector('#sangse').style.display='block';
+            document.querySelector('#open').style.display='none';
+        }
+        function hideDetail(){
+            document.querySelector('#sangse').style.display='none';
+            document.querySelector('#open').style.display='block';
+        }
+        function showDetail2(){
+            document.querySelector('#sangse2').style.display='block';
+            document.querySelector('#open2').style.display='none';
+        }
+        function hideDetail2(){
+            document.querySelector('#sangse2').style.display='none';
+            document.querySelector('#open2').style.display='block';
+        }
+    </script>
+</body>
+</html>
